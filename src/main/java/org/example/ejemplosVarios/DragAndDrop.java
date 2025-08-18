@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ejemplosVarios;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -65,7 +65,7 @@ public class DragAndDrop
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
         driver.get("https://jqueryui.com/");
 
