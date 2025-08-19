@@ -16,13 +16,13 @@ public class BuyItems extends PageBaseClass {
 
     @Test
     public void addItemsToCartAndBuy() throws InterruptedException {
-        LandingPage landingPage = new LandingPage(driver);
-        landingPage.invokeBrowser("chrome");
-        landingPage.goToWebSite("https://automationteststore.com");
+        PageBaseClass pageBaseClass = new PageBaseClass();
+        pageBaseClass.invokeBrowser("Chrome");
+        landingPage= pageBaseClass.goToWebSite("https://automationteststore.com");
         landingPage.addItemToCart();
         cartPage= landingPage.goToCart();
         Thread.sleep(2000);
-        cartPage.increaseItemQuantityTo(2);
+        cartPage.increaseItemQuantityTo( "2");
         cartPage.clickUpdateCart();
         Thread.sleep(2000);
 

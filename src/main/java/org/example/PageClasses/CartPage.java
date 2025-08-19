@@ -15,8 +15,9 @@ public class CartPage extends PageBaseClass {
     }
 
 
-    public void increaseItemQuantityTo(int itemNumber) throws InterruptedException {
-        driver.findElement(By.id("cart_quantity50")).sendKeys("itemNumber");
+    public void increaseItemQuantityTo(String itemNumber) throws InterruptedException {
+        driver.findElement(By.id("cart_quantity50")).clear();
+        driver.findElement(By.id("cart_quantity50")).sendKeys(itemNumber);
     }
 
     @FindBy(id = "cart_update")

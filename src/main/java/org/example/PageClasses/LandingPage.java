@@ -15,16 +15,9 @@ public class LandingPage extends PageBaseClass{
     WebDriver driver;
     //create COnstructor for the driver to use
     public LandingPage(WebDriver driver) {
+
         this.driver = driver;
     }
-
-//    @FindBy(xpath="//*[@id=\"block_frame_featured_1769\"]/div/div[1]/div[2]/div[3]/a")
-//    public WebElement addToCart;
-//    public void clickAddToCartButton() {
-//        addToCart.click();
-//    }
-
-
 
     public void addItemToCart() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"block_frame_featured_1769\"]/div/div[1]/div[2]/div[3]/a")).click();
