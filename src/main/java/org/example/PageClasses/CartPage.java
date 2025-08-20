@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CartPage extends PageBaseClass {
 
@@ -24,5 +25,12 @@ public class CartPage extends PageBaseClass {
     WebElement cartUpdate;
     public void clickUpdateCart(){
         cartUpdate.click();
+    }
+
+    @FindBy(id ="cart_checkout1")
+    WebElement checkOutButton;
+    public LoginPage clickCheckOutButton(){
+        checkOutButton.click();
+        return PageFactory.initElements(driver,LoginPage.class);
     }
 }
