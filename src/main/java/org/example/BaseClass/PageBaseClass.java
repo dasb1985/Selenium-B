@@ -1,11 +1,15 @@
 package org.example.BaseClass;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
 import org.example.PageClasses.LandingPage;
+import org.example.Utils.ExtentReportManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import com.aventstack.extentreports.ExtentTest;
 
 public class PageBaseClass {
 
@@ -30,12 +34,15 @@ public class PageBaseClass {
             System.out.print(e.getMessage());
         }
         driver.manage().window().maximize();
+        //logger.log(Status.INFO, "Opening Browser Name : " + browserName);
+
 //        return PageFactory.initElements(driver, LandingPage.class);
     }
 
 
     public LandingPage goToWebSite(String url) {
         driver.get(url);
+//        logger.log(Status.PASS, "Page is Opened");
         return PageFactory.initElements(driver,LandingPage.class);
     }
 

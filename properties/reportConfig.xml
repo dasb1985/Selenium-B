@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>dark</theme>
+
+        <!-- enables timeline -->
+        <!-- defaults to true -->
+        <enableTimeline>true</enableTimeline>
+        <encoding>UTF-8</encoding>
+        <protocol>https</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>Extent Framework - Reporting</documentTitle>
+        <reportName>XML Config report</reportName>
+
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+
+                });
+            ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>
