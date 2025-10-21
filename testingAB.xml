@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Two Suites">
+
+   <!-- <suite-files>
+        <suite-file path="SuiteTestA.xml"></suite-file>
+        <suite-file path="SuiteTestB.xml"></suite-file>
+    </suite-files>
+    -->
+
+    <!-- <test verbose="2" preserve-order="true" parallel="tests"-->
+    <test verbose="2" preserve-order="true"
+          name="C:/Workspace/java/Selenium-B/src/main/java/org/example/TestCases/BuyItems.java">
+        <classes>
+            <class name="org.example.TestCases.BuyItems">
+                <methods>
+                    <include name="addItemsToCartAndBuy"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
